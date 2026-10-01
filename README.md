@@ -40,7 +40,7 @@ A window opens with a blinking cursor after a line like `PS C:\Users\jsmith\FERC
 
 
 
-### 3. Check that Python is installed
+### 3. Check that Python is installed, and install it if not
 
 Type this and press Enter:
 
@@ -48,8 +48,28 @@ Type this and press Enter:
 python --version
 ```
 
-- **You see `Python 3.9` or higher** (for example `Python 3.12.4`): you're ready.
-- **You see "not recognized," or the Microsoft Store opens:** try `py --version` instead. If that works, type `py` wherever this guide says `python`. If neither works, Python isn't installed. Ask Nick Vigdahl, since installing it may need IT.
+- **You see `Python 3.9` or higher** (for example `Python 3.12.4`): you're ready. Go to step 4.
+- **You see "not recognized," or the Microsoft Store opens:** try `py --version`. If that shows `Python 3.9` or higher, type `py` wherever this guide says `python`, and go to step 4. Otherwise, install Python as below.
+
+**Installing Python.** In the same terminal, type this and press Enter:
+
+```
+winget install Python.Python.3
+```
+
+- If it asks whether you agree to the source or package terms, type `Y` and press Enter.
+- If Windows asks for permission to make changes, click **Yes**.
+- When it says **Successfully installed**, close the terminal window and open a new one in your `FERC` folder (step 2). The new window is needed before Windows will find Python.
+- Check again with `python --version`.
+
+If the install doesn't work:
+
+| What you see | What to do |
+|---|---|
+| `No package found matching input criteria` | Type `winget search Python.Python` to list the available versions, then install the newest, for example `winget install Python.Python.3.13`. |
+| `'winget' is not recognized` | Your laptop doesn't have Windows' app installer. Ask Nick Vigdahl or IT. |
+| An installer error or a permissions message | Installing may need IT on your laptop. Ask Nick Vigdahl. |
+| Python installed, but `python` still opens the Microsoft Store | Use `py` instead of `python` in every command. Or go to **Settings > Apps > Advanced app settings > App execution aliases** and turn off the two **python** entries. |
 
 
 
