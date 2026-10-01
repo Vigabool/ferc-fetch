@@ -242,12 +242,6 @@ Rerunning a command resumes where it stopped: files already on disk are skipped.
 - **Restricted material.** By default only public filings are searched. With `--availability all`, CEII and privileged filings appear in the manifest but are never downloaded. Access requires a FERC determination under 18 CFR 388.113.
 - **Pace.** The script waits 2 seconds between requests and takes a 60-second break every 25 downloads, so a large project can take hours. Leave it running overnight.
 
-## Fixed from Kyle's original script
-
-- `--from`/`--to` had no effect: the API ignored the date format and returned every filing. Fixed.
-- "Public only" had no effect either, so CEII filings came back and failed as 401 errors. Fixed.
-- The manifest's class/type, library, and availability columns were always blank. They are now filled in, along with author/filer, recipient, and an eLibrary link.
-
 ## Backlog
 
 Ideas raised while building this, not yet done. Roughly in priority order.
