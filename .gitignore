@@ -1,0 +1,9 @@
+# Allow-list: only the tool itself is tracked. Downloaded records, generated
+# packages, meeting notes and anything else in this folder stay local.
+/*
+!/.gitignore
+!/README.md
+!/ferc_fetch.py
+!/ferc_text.py
+!/ferc_package.py
+!/pypdf.zip
