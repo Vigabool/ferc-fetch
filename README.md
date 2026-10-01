@@ -54,7 +54,7 @@ python --version
 **Installing Python.** In the same terminal, type this and press Enter:
 
 ```
-winget install Python.Python.3
+winget install Python.Python.3.14
 ```
 
 - If it asks whether you agree to the source or package terms, type `Y` and press Enter.
@@ -66,7 +66,6 @@ If the install doesn't work:
 
 | What you see | What to do |
 |---|---|
-| `No package found matching input criteria` | Type `winget search Python.Python` to list the available versions, then install the newest, for example `winget install Python.Python.3.13`. |
 | `'winget' is not recognized` | Your laptop doesn't have Windows' app installer. Ask Nick Vigdahl or IT. |
 | An installer error or a permissions message | Installing may need IT on your laptop. Ask Nick Vigdahl. |
 | Python installed, but `python` still opens the Microsoft Store | Use `py` instead of `python` in every command. Or go to **Settings > Apps > Advanced app settings > App execution aliases** and turn off the two **python** entries. |
