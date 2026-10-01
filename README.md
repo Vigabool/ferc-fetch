@@ -19,9 +19,14 @@ You run the tool by typing commands into a terminal, a text window where you typ
 
 1. Open **File Explorer** and go to **This PC > Local Disk (C:) > Users >** your user name.
 2. Right-click an empty area, choose **New > Folder**, and name it `FERC`.
-3. Copy the four files above into `FERC`.
+3. Download the tool from GitHub and copy its files into `FERC`:
+   1. Go to https://github.com/Vigabool/ferc-fetch and sign in to GitHub. The repository is private, so you need a GitHub account that has been given access; ask Nick Vigdahl. (The tool will move to Merjent's GitHub later; this guide will be updated with the new address.)
+   2. Click the green **Code** button, then **Download ZIP**.
+   3. Open your **Downloads** folder, right-click `ferc-fetch-main.zip`, choose **Extract All**, and click **Extract**.
+   4. Open the extracted `ferc-fetch-main` folder (there may be a second `ferc-fetch-main` folder inside it). Select the four files `ferc_fetch.py`, `ferc_text.py`, `ferc_package.py`, and `pypdf.zip`, and copy them into your `FERC` folder. Copy `pypdf.zip` as it is; don't extract it.
+   5. To update later, repeat these steps and replace the four files. Your downloaded projects in `FERC` aren't affected.
 
-Use this folder rather than your Desktop, Documents, or a OneDrive or SharePoint folder. Those usually sync to the cloud, and syncing thousands of downloaded files slows the run and your laptop. When the package is ready, copy only its `Knowledge` folder to SharePoint.
+Use this folder rather than your Desktop, Documents, or a OneDrive or SharePoint folder. Those usually sync to the cloud, and syncing thousands of downloaded files slows the run and your laptop. When the package is ready, copy only its `Knowledge` folder to OneDrive or SharePoint.
 
 
 
@@ -163,7 +168,7 @@ Oconto/
   query.json                  the query that produced this folder
 
   from the package stage:
-  copilot/Knowledge/          upload this folder to SharePoint for the agent
+  copilot/Knowledge/          copy this folder to OneDrive or SharePoint for the agent
   copilot/Agent Instructions.txt   paste into the agent's instructions
   text/                       each document's raw text (a cache; rebuilds are fast)
   needs_ocr.csv               scans with no readable text (only written if any)
@@ -189,12 +194,12 @@ Knowledge/
 
 ### Setting up an agent
 
-1. Upload the `Knowledge` folder to a SharePoint or OneDrive folder for the project.
-2. Create an agent from that folder: use "Create an agent" in SharePoint, or the agent builder in the Copilot app with the folder as its knowledge source.
+1. Copy the `Knowledge` folder into a OneDrive folder (just for you) or a SharePoint site (for a project team).
+2. Create an agent from that folder: use "Create an agent" in SharePoint, or the agent builder in the Copilot app with the OneDrive or SharePoint folder as its knowledge source.
 3. Paste `Agent Instructions.txt` into the agent's instructions. The instructions tell it to use the overview and catalog first, to cite accession numbers, and never to assume a filing doesn't exist just because search didn't find it.
 4. Share the agent with the project team.
 
-When new filings come in, rerun the same command (it downloads only what's new), then replace the `Knowledge` folder in SharePoint.
+When new filings come in, rerun the same command (it downloads only what's new), then replace the `Knowledge` folder in OneDrive or SharePoint.
 
 ### Text extraction
 
