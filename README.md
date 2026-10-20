@@ -263,6 +263,11 @@ Ideas raised while building this, not yet done. Roughly in priority order.
 - **AI-written summaries.** A 150 to 300 word summary per filing and a written project brief, generated once while the package is built. This is the most promising fix for "how did positions evolve" questions. It needs an AI service such as the Claude API. There's a place for it in each document file.
 - **A shared library and cross-project agent.** One SharePoint library with a folder per project and an agent per project, plus a central agent for questions across projects. Copilot only retrieves files a user has permission to see.
 
+### Other sources
+- **Minnesota PUC eDockets.** On hold. Minnesota doesn't allow automated access: the eFiling site's `robots.txt` disallows its document search and API, and searches sit behind a Cloudflare security check (mn.gov uses a Radware bot check). The tool won't work around those. Routes if this comes back:
+  - Ask the Minnesota Department of Commerce, which runs eFiling, for approved data access. Its site shows an API that isn't open to the public. This is the only route to automated downloads.
+  - A manual route: people download documents in their browser, or follow dockets through eDockets email subscriptions (new filings only), and the tool packages the folder. Set aside because it keeps the manual searching and downloading the tool exists to remove.
+
 ### Ease of use
 - **No-install interface.** Options considered:
   - A web page plus a small cloud relay. FERC's server blocks the browser's pre-check before downloads, so a page can't call eLibrary directly.
